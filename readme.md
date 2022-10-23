@@ -9,8 +9,9 @@ All data is stored in [table, ID, key, value] format. On writing, the time stamp
 Queries have two parts: a list of variables to get, and a list of chained queries. Variables are strings that start with ?, and literals are everything else. 
 
 For example, to get a list of soups made in Ohio, by name, you would do:
-"""
+
+```
 .query(["?soupName"], [["soup", "?soupId", "?t1", "name", "?soupName"], ["soup", "?soupId", "?t2", "mfg", "?mfgId"], ["mfg", "?mfgId", "?t3", "state", "Ohio"]])
-"""
+```
 
 
